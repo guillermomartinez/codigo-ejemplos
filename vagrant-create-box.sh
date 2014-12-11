@@ -29,6 +29,9 @@ cd /media/VBOXADDITIONS
 sudo ./VBoxLinuxAdditions.run
 sudo umount /media/VBOXADDITIONS
 cd ~
+lsmod | grep vboxsf
+sudo /etc/init.d/vboxadd setup
+
 sudo yum clean all
 sudo dd if=/dev/zero of=/EMPTY bs=1M
 sudo rm -f /EMPTY
