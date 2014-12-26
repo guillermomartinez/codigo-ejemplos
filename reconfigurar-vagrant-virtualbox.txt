@@ -1,10 +1,10 @@
-Cuando Formateaso pasas tus archivos a otra maquina los pasos para configurar tus vm con vagrant son:
+Cuando Formateas o pasas tus archivos a otra maquina, los pasos para configurar tus VM con vagrant son:
 - has un backup de la carpeta "C:\Users\username\VirtualBox VMs"
 - has un backup de la carpeta "C:\Users\username\.vagrant.d\boxes"
-- En la nueva maquina copia la carpeta VirtualBox VMs y boxes a la nueva ubicacion si fuera el caso.
-- En el virtual box en la opcion maquina agrega las nuevas maquinas
+- En la nueva maquina copia la carpeta VirtualBox VMs y boxes a la nueva ubicación si fuera el caso.
+- En el programa virtual box en la opcion maquina agrega las nuevas VM
 - Desde la consola ejecuta vagrant box list
-- Modifica en los archivos id y index_uuid para que este iguales
+- Modifica en los archivos id y index_uuid para que los valores esten iguales
 /proyecto/.vagrant/machines/default/virtualbox/id = C:\Users\username\.VirtualBox\VirtualBox.xml
 /proyecto/.vagrant/machines/default/virtualbox/index_uuid = C:\Users\username\.vagrant.d\data\machine-index\index
 - Listo: vagrant up
