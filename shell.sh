@@ -12,6 +12,18 @@ for FILE in $DIR* ;
 	mv $FILE $NEWFILE; 
 done
 ## Activar branch name in current promt
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+# RED="\[\033[0;31m\]"
+# YELLOW="\[\033[0;33m\]"
+# GREEN="\[\033[0;32m\]"
+# NO_COLOR="\[\033[0m\]"
+# PS1="\u@\h:\w$YELLOW$(__git_ps1)\[\e[0m\]$ "
+source ~/.git-prompt.sh
+PS1='\u@\h \w\[\033[0;33m\]$(__git_ps1)\[\e[0m\]\$ '
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+
+
 sudo apt-get install bash-completion
 vim ~/.bashrc
 # enable bash completion in interactive shells
