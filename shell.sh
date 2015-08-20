@@ -45,3 +45,8 @@ GREEN="\[\033[0;32m\]"
 NO_COLOR="\[\033[0m\]"
 export PS1="\u@\h:\w$YELLOW$(__git_ps1)\[\e[0m\]$ "
 # export PS1='\u@\h:\w\[\033[0;33m\]$(__git_ps1)\[\e[0m\]$ '
+
+# goaccess
+sudo find /var/log/httpd -type f -name '*log*' -exec cat {} + >> /var/log/out.log
+sudo goaccess -f /var/log/httpd/access_log -a -d -H -M -m --date-format '%d/%b/%Y' --log-format '%h %^[%d:%^] "%r" %s %b "%R" "%u"' > /var/www/out.html
+sudo goaccess -f /var/log/out.log -a -d -H -M -m --ignore-crawlers --date-format '%d/%b/%Y' --log-format '%h %^[%d:%^] "%r" %s %b "%R" "%u"' > /var/www/out.html
