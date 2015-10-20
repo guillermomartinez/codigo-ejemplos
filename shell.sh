@@ -50,3 +50,17 @@ export PS1="\u@\h:\w$YELLOW$(__git_ps1)\[\e[0m\]$ "
 sudo find /var/log/httpd -type f -name '*log*' -exec cat {} + >> /var/log/out.log
 sudo goaccess -f /var/log/httpd/access_log -a -d -H -M -m --date-format '%d/%b/%Y' --log-format '%h %^[%d:%^] "%r" %s %b "%R" "%u"' > /var/www/out.html
 sudo goaccess -f /var/log/out.log -a -d -H -M -m --ignore-crawlers --date-format '%d/%b/%Y' --log-format '%h %^[%d:%^] "%r" %s %b "%R" "%u"' > /var/www/out.html
+
+## Install package npm in user folder linux
+NPM_PACKAGES="$HOME/.npm-packages"
+mkdir -p "$NPM_PACKAGES"
+echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
+# your .zshrc/.bashrc:
+# NPM packages in homedir
+NPM_PACKAGES="$HOME/.npm-packages"
+# Tell our environment about user-installed node tools
+PATH="$NPM_PACKAGES/bin:$PATH"
+#unset MANPATH
+#MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# Tell Node about these packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
