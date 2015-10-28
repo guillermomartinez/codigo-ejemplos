@@ -64,3 +64,8 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 #MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # Tell Node about these packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+## Cambiar permisos
+sudo chmod 775 `find . -type d`
+sudo chmod 664 `find . -type f`
+
