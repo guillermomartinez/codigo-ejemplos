@@ -40,7 +40,9 @@ sudo shutdown -h now
 mkdir ~/code/personal/vagrant_boxes
 cd ~/code/personal/vagrant_boxes
 #vagrant package --base vm-name
-vagrant package --output vm-name.box --base vm-name
+# para crear archivo Vagrantfile
+vagrant init 
+vagrant package --output vm-name.box --base vm-name --vagrantfile Vagrantfile
 #test
 vagrant box add ubuntu64 package.box
 vagrant init ubuntu64
