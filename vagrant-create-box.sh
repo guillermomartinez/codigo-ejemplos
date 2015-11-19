@@ -45,3 +45,14 @@ vagrant box add ubuntu64 package.box
 vagrant init ubuntu64
 vagrant up
 vagrant ssh
+
+#UBUNTU
+sudo apt-get install sysv-rc-conf
+sysv-rc-conf ssh on
+
+sudo apt-get install build-essential module-assistant
+sudo m-a prepare
+
+sudo ./VBoxLinuxAdditions.run 
+lsmod | grep -io vboxguest
+modinfo vboxguest
