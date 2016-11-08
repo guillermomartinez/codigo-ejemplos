@@ -1,3 +1,8 @@
+# size of folder
+du -sh folder
+du -sch folder
+du -h --max-depth=1 folder | sort -hr
+
 # rename files
 NUM=0;
 DIR="folder/";
