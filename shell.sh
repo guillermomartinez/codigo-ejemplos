@@ -7,6 +7,7 @@ tar -xzvf name.tar.gz
 du -sh folder
 du -sch folder
 du -h --max-depth=1 folder | sort -hr
+find ./ -iname *.mp4 | xargs du -h --max-depth=1 | sort -hr
 
 # rename files
 NUM=0;
