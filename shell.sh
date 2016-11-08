@@ -1,3 +1,13 @@
+#espacio en disco
+df -h
+df -k
+du -sh
+df --output=field1,field2,...
+df --output=source,used,avail /data/
+df --o
+#exclude
+df -x ext2
+
 # comprimir
 tar -czvf name.tar.gz folder otherfoder
 #descomprimir
