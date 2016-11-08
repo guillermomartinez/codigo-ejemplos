@@ -1,3 +1,8 @@
+# comprimir
+tar -czvf name.tar.gz folder otherfoder
+#descomprimir
+tar -xzvf name.tar.gz
+
 # size of folder
 du -sh folder
 du -sch folder
