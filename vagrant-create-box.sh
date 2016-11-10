@@ -1,4 +1,4 @@
-groupadd vagrant
+#groupadd vagrant
 useradd -G vagrant vagrant
 passwd vagrant
 
@@ -21,7 +21,7 @@ sudo vi /etc/ssh/sshd_config
 AuthorizedKeysFile %h/.ssh/authorized_keys
 sudo service sshd restart
 
-sudo yum install -y gcc make kernel-devel
+sudo yum install -y nano wget gcc bzip2 make kernel-devel-`uname -r`
 #yum install kernel-devel-2.6.32-504.el6.x86_64
 mkdir /media/VBOXADDITIONS
 mount /dev/cdrom /media/VBOXADDITIONS
