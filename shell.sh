@@ -89,5 +89,5 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 ## Cambiar permisos
 sudo chmod 775 `find . -type d`
 sudo chmod 664 `find . -type f`
-sudo find . -type d -exec chmod -R 775 {} \;
-sudo find . -type f -exec chmod -R 664 {} \;
+sudo find . -type d -exec chmod -R 755 {} \;
+sudo find . -type f -exec chmod -R 644 {} \;
