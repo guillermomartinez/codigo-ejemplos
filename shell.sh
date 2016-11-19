@@ -10,6 +10,7 @@ df -x ext2
 
 # comprimir
 tar -czvf name.tar.gz folder otherfoder
+tar -czvf name.tar.gz folder otherfoder --exclude='folder1' --exclude='folder2'
 #descomprimir
 tar -xzvf name.tar.gz
 
