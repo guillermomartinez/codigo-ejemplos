@@ -92,3 +92,18 @@ sudo chmod 775 `find . -type d`
 sudo chmod 664 `find . -type f`
 sudo find . -type d -exec chmod -R 755 {} \;
 sudo find . -type f -exec chmod -R 644 {} \;
+
+#!/bin/bash
+
+TEST_URL="http://domain.com/"
+
+FIREFOX_USERAGENT_STRING="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14"
+GOOGLEBOT_USERAGENT_STRING="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+
+#get page for firefox browser
+rm firefox.html
+wget -c --user-agent="$FIREFOX_USERAGENT_STRING" --output-document=firefox.html "$TEST_URL"
+
+#get page for google bot
+rm googlebot.html
+wget -c --user-agent="$GOOGLEBOT_USERAGENT_STRING" --output-document=googlebot.html "$TEST_URL"
