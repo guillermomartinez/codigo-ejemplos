@@ -1,3 +1,6 @@
+# buscar
+find folder/ -type f -name "*.php"
+
 #espacio en disco
 df -h
 df -k
