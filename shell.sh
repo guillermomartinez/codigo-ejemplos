@@ -110,3 +110,8 @@ wget -c --user-agent="$FIREFOX_USERAGENT_STRING" --output-document=firefox.html 
 #get page for google bot
 rm googlebot.html
 wget -c --user-agent="$GOOGLEBOT_USERAGENT_STRING" --output-document=googlebot.html "$TEST_URL"
+
+<Directorymatch "^/.*/\.git/">
+Order deny,allow
+Deny from all
+</Directorymatch>
