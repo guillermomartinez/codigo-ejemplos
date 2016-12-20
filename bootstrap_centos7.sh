@@ -53,6 +53,7 @@ systemctl start mysqld
 
 yum -y install phpmyadmin
 # sudo vim /etc/httpd/conf.d/phpMyAdmin.conf
+# Alias /phpadmin98545 /usr/share/phpMyAdmin
 # <IfModule mod_authz_core.c>
 #   # Apache 2.4
 #   <RequireAny>
