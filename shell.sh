@@ -115,3 +115,6 @@ wget -c --user-agent="$GOOGLEBOT_USERAGENT_STRING" --output-document=googlebot.h
 Order deny,allow
 Deny from all
 </Directorymatch>
+
+
+sudo mount -t vboxsf -o uid=1000,gid=1000 vagrant /vagrant
