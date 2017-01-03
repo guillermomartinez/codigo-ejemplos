@@ -1,6 +1,8 @@
 # copiar
 rsync --dry-run -av --exclude='.git' --exclude='folder' datos/* html/
 rsync -av --exclude='.git' --exclude='folder' datos/* html/
+# copiar solo la diferencia de origen a destino
+rsync -auv --exclude='.git' --exclude='folder' datos/* html/
 
 # buscar
 find folder/ -type f -name "*.php"
