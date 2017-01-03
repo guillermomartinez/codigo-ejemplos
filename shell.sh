@@ -1,3 +1,7 @@
+# copiar
+rsync --dry-run -av --exclude='.git' --exclude='folder' datos/* html/
+rsync -av --exclude='.git' --exclude='folder' datos/* html/
+
 # buscar
 find folder/ -type f -name "*.php"
 find . -mtime -1 -ls | head -3
