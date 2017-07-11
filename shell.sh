@@ -18,6 +18,11 @@ df --o
 #exclude
 df -x ext2
 
+# comprimir por partes
+tar -cvzf - folder | split -b 150M - "archive-part-"
+# descomprimir y unir partes
+cat archive-part-* | tar xz
+
 # comprimir
 tar -czvf name.tar.gz folder otherfoder
 tar -czvf name.tar.gz folder otherfoder --exclude='folder1' --exclude='folder2'
