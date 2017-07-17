@@ -26,6 +26,13 @@ cat archive-part-* | tar xz
 # comprimir
 tar -czvf name.tar.gz folder otherfoder
 tar -czvf name.tar.gz folder otherfoder --exclude='folder1' --exclude='folder2'
+
+zip archivos-comprimidos.zip archivo1 archivo2 archivo3
+# todos los archivos
+zip archivos.zip *
+# todo un directorio
+zip -r directorio-comprimido.zip /home/usuario
+
 #descomprimir
 tar -xzvf name.tar.gz
 
