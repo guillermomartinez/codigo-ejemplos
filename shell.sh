@@ -1,3 +1,8 @@
+# últimos 5 archivos en una carpeta
+sudo ls -lAtr folder | tail -n 5
+# full formato datetime
+ls -la --full-time
+
 # copiar
 rsync --dry-run -av --exclude='.git' --exclude='folder' datos/* html/
 rsync -av --exclude='.git' --exclude='folder' datos/* html/
