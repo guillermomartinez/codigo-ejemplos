@@ -144,3 +144,29 @@ Deny from all
 sudo mount -t vboxsf -o uid=1000,gid=1000 vagrant /vagrant
 
 nmap -sV --script http-wordpress-enum --script-args www.domain.com
+
+[ETH0]
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+
+TYPE=Ethernet
+BOOTPROTO=none
+IPADDR=192.168.1.151
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+DNS1=200.48.225.130
+DNS2=200.48.225.146
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=00000000000000000000000
+DEVICE=ens33
+ONBOOT=yes
