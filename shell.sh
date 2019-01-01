@@ -170,3 +170,48 @@ NAME=ens33
 UUID=00000000000000000000000
 DEVICE=ens33
 ONBOOT=yes
+
+# [FAIL2BAN]
+sudo yum install fail2ban
+sudo systemctl enable fail2ban
+sudo nano /etc/fail2ban/jail.local
+#####
+[DEFAULT]
+# Ban hosts for one hour:
+bantime = 3600
+
+# Override /etc/fail2ban/jail.d/00-firewalld.conf:
+banaction = iptables-multiport
+
+[sshd]
+enabled = true
+#####
+sudo systemctl restart fail2ban
+sudo fail2ban-client status
+sudo fail2ban-client status sshd
+
+# sudo nano /etc/fail2ban/jail.conf
+# ignoreip = 127.0.0.1/8
+
+# bannear ip
+# detectar ip con mayor conexiones
+netstat -plan|grep :80|awk {'print $5'}|cut -d: -f 1|sort|uniq -c|sort -nk 1
+fail2ban-client set ssh-ddos banip 10.10.1.1
+fail2ban-client set ssh-ddos unbanip 10.10.1.1
+
+#[MONTAR DISK DURO FORMATEANDO]
+fdisk -l
+lsblk
+sudo file -s /dev/xvdf
+sudo mkfs -t ext4 /dev/xvdf
+sudo mkdir /data
+sudo mount /dev/xvdf /data
+ls -la /data/
+sudo cp /etc/fstab /etc/fstab.orig
+
+#[IMPORTAR MYSQL]
+mysqldump -u username -p database_name > data-dump.sql
+mysql -u username -p new_database < data-dump.sql
+
+#[CAMBIO ZONETIME]
+timedatectl set-timezone America/Lima
