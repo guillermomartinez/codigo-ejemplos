@@ -8,3 +8,9 @@ Cuando Formateas o pasas tus archivos a otra maquina, los pasos para configurar 
 /proyecto/.vagrant/machines/default/virtualbox/id = C:\Users\username\.VirtualBox\VirtualBox.xml
 /proyecto/.vagrant/machines/default/virtualbox/index_uuid = C:\Users\username\.vagrant.d\data\machine-index\index
 - Listo: vagrant up
+
+RECONECTAR VAGRANT DESPUES DE FORMATEAR WIN10
+- El archivo se queda sin usuario. Debemos asignar nuestro usuario
+vagrant\.vagrant\machines\PROYECTO\virtualbox\private_key
+- Renombrar archivo para que vagrant cree automaticamente el archivo
+vagrant\.vagrant\machines\PROYECTO\virtualbox\private_key_old
