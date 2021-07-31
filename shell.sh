@@ -1,3 +1,6 @@
+# Encontrar solo archivos que se modificaron en los últimos 15 días
+find folder -type f -mtime -15 -ls
+
 # últimos 5 archivos en una carpeta
 sudo ls -lAtr folder | tail -n 5
 # full formato datetime
